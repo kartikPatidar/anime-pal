@@ -15,7 +15,6 @@ function App() {
     if (searchQuery === '') {
       return
     }
-    console.log(myURL);
     axios.get(myURL, {
       headers: {
         'Accept': 'application/vnd.api+json',
@@ -23,8 +22,6 @@ function App() {
       }
     }).then((response) => {
       setAnimeDetails(response.data.data);
-      // console.log(animeDetails);
-      console.log(response.data.data);
     })
   }, [myURL, searchQuery]);
 
